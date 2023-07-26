@@ -6,7 +6,7 @@ import { FC, useState } from "react";
 interface SearchBarProps {}
 
 export const SearchBar: FC<SearchBarProps> = (props) => {
-  const [query, setQuery] = useState("asd");
+  const [query, setQuery] = useState("");
   const router = useRouter();
 
   return (
