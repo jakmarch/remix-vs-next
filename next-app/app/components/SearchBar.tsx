@@ -17,12 +17,21 @@ export const SearchBar: FC<SearchBarProps> = (props) => {
         Search
       </button> */}
 
-      <form>
+      <form action={"/search"}>
         <input name="query" onChange={(e) => setQuery(e.target.value)} />
-        {query && <Link prefetch href={`/search?query=${query}`} />}
+        {query && (
+          <Link
+            prefetch
+            href={`/search?query=${query}`}
+            className="mx-2 px-2 border-solid border-2 border-indigo-600"
+          >
+            Link search
+          </Link>
+        )}
         <button
           type="submit"
           onClick={() => router.push(`/search?query=${query}`)}
+          className="mx-2 px-2 border-solid border-2 border-indigo-600"
         >
           Search
         </button>
